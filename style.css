@@ -1,0 +1,85 @@
+/* specificity matters; if you have more than one specification at the same level, order matters- will use the most recent(bottom one) */
+/* 
+footer{
+    background-color: blue;
+    height: 20vh;
+}
+
+.blog-footer{
+    background-color: green;
+}
+
+#blog-footer-page-one{
+    background-color: red;
+} */
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header img{
+    width: 4em;
+    margin-left: 3em;
+}
+
+/* > specifies direct children; Only select divs whose immediate parent is a section */
+
+section > div{
+    border: 1px solid gray;
+    width: 15vw;
+    margin: 1em;
+    padding: 1em;
+}
+
+div img{
+    width: 12vw;
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div:first-child{
+    background-color: cornflowerblue;
+}
+
+h3:first-child{
+    color: navy;
+}
+
+div:nth-child(3){
+    background-color: pink;
+}
+
+div:nth-child(7){
+    background-color: purple;
+}
+
+.bill-container + div{
+    background-color: hotpink;
+}
+
+.bill-container ~ div{
+    background-color: lightgreen;
+}
+
+/* .ron-container ~ div{
+    background-color: lightgreen;
+}
+
+Just selects Ginny, only affects the elements afterwards */
+
+div img:hover{
+    width: 100%;
+}
+
+section > div:hover{
+    background-color: yellow;
+}
